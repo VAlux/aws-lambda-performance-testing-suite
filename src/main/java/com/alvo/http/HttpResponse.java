@@ -1,4 +1,4 @@
-package com.meteogroup.http;
+package com.alvo.http;
 
 import org.apache.http.HttpStatus;
 

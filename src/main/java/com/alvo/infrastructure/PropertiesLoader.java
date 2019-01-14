@@ -1,4 +1,4 @@
-package com.meteogroup.infrastructure;
+package com.alvo.infrastructure;
 
 import java.io.IOException;
 import java.io.InputStream;

@@ -1,10 +1,10 @@
-package com.meteogroup.check.concreete;
+package com.alvo.check.concreete;
 
-import com.meteogroup.check.CheckResult;
-import com.meteogroup.check.PerformanceCheck;
-import com.meteogroup.http.AuthorizationServer;
-import com.meteogroup.http.HttpRequestExecutor;
-import com.meteogroup.infrastructure.PropertiesLoader;
+import com.alvo.check.CheckResult;
+import com.alvo.check.PerformanceCheck;
+import com.alvo.http.AuthorizationServer;
+import com.alvo.http.HttpRequestExecutor;
+import com.alvo.infrastructure.PropertiesLoader;
 import org.apache.commons.lang3.time.StopWatch;
 import org.apache.http.HttpStatus;
 import org.apache.http.client.methods.CloseableHttpResponse;

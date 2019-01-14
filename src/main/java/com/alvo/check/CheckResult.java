@@ -1,4 +1,4 @@
-package com.meteogroup.check;
+package com.alvo.check;
 
 public abstract class CheckResult {
 

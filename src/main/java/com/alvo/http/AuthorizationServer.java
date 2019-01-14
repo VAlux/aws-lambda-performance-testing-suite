@@ -1,4 +1,4 @@
-package com.meteogroup.http;
+package com.alvo.http;
 
 import com.amazonaws.util.json.Jackson;
 import org.apache.http.HttpEntity;

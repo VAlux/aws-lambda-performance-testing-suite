@@ -1,13 +1,13 @@
-package com.meteogroup.infrastructure;
+package com.alvo.infrastructure;
 
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
-import com.meteogroup.check.CheckResult;
-import com.meteogroup.check.PerformanceCheckExecutionService;
-import com.meteogroup.http.HttpRequest;
-import com.meteogroup.http.HttpResponse;
-import com.meteogroup.http.HttpResponseTranslator;
-import com.meteogroup.http.PerformanceCheckResultResponse;
+import com.alvo.check.CheckResult;
+import com.alvo.check.PerformanceCheckExecutionService;
+import com.alvo.http.HttpRequest;
+import com.alvo.http.HttpResponse;
+import com.alvo.http.HttpResponseTranslator;
+import com.alvo.http.PerformanceCheckResultResponse;
 
 import java.util.List;
 import java.util.Map;

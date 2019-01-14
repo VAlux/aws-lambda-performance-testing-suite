@@ -1,4 +1,4 @@
-package com.meteogroup.check;
+package com.alvo.check;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

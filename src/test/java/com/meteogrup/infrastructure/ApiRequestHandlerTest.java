@@ -1,12 +1,12 @@
 package com.meteogrup.infrastructure;
 
+import com.alvo.check.CheckResult;
+import com.alvo.check.PerformanceCheckExecutor;
+import com.alvo.check.concreete.LatencyCheckResult;
+import com.alvo.http.HttpRequest;
+import com.alvo.http.HttpResponse;
+import com.alvo.infrastructure.ApiRequestHandler;
 import com.amazonaws.util.json.Jackson;
-import com.meteogroup.check.CheckResult;
-import com.meteogroup.check.PerformanceCheckExecutor;
-import com.meteogroup.check.concreete.LatencyCheckResult;
-import com.meteogroup.http.HttpRequest;
-import com.meteogroup.http.HttpResponse;
-import com.meteogroup.infrastructure.ApiRequestHandler;
 import org.apache.http.HttpStatus;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -22,6 +22,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Optional;
 
 public class ApiRequestHandlerTest {
@@ -33,7 +34,7 @@ public class ApiRequestHandlerTest {
   private ApiRequestHandler apiRequestHandler;
 
   @BeforeMethod
-  public void setUp() throws IOException, InstantiationException, IllegalAccessException {
+  public void setUp() throws InstantiationException, IllegalAccessException {
     apiRequestHandler = new ApiRequestHandler();
     MockitoAnnotations.initMocks(this);
     Mockito.when(performanceCheckExecutor.execute(Mockito.any(), Mockito.any(), Mockito.anyInt())).thenReturn(getSuccessfulCheckResult());
@@ -53,7 +54,9 @@ public class ApiRequestHandlerTest {
     final HttpResponse httpResponse = apiRequestHandler.handleRequest(httpRequest, null);
 
     final LatencyCheckResult actual = Jackson.fromJsonString(httpResponse.getBody(), LatencyCheckResult.class);
-    final String expectedResponse = Files.readFile(getClass().getClassLoader().getResourceAsStream("response.json"));
+    final String expectedResponse =
+        Files.readFile(Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("response.json")));
+
     final LatencyCheckResult expected = Jackson.fromJsonString(expectedResponse, LatencyCheckResult.class);
 
     Assert.assertEquals(httpResponse.getStatusCode(), HttpStatus.SC_OK);
@@ -62,10 +65,10 @@ public class ApiRequestHandlerTest {
 
   private Map<String, String> createCorrectParams() {
     return new HashMap<String, String>() {{
-        put("checksToExecute", "LatencyCheck");
-        put("repetitions", "1");
-        put("reduceResults", "false");
-        put("payload", "https://elevation.weather.mg?locatedAt=10.041,22.409");
-      }};
+      put("checksToExecute", "LatencyCheck");
+      put("repetitions", "1");
+      put("reduceResults", "false");
+      put("payload", "https://elevation.weather.mg?locatedAt=10.041,22.409");
+    }};
   }
 }

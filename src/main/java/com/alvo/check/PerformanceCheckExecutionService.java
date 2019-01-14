@@ -1,9 +1,9 @@
-package com.meteogroup.check;
+package com.alvo.check;
 
-import com.meteogroup.http.HttpResponse;
-import com.meteogroup.http.HttpResponseTranslator;
-import com.meteogroup.http.PerformanceCheckResultResponse;
-import com.meteogroup.infrastructure.PropertiesLoader;
+import com.alvo.http.HttpResponse;
+import com.alvo.http.HttpResponseTranslator;
+import com.alvo.http.PerformanceCheckResultResponse;
+import com.alvo.infrastructure.PropertiesLoader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -1,6 +1,6 @@
-package com.meteogroup.check.concreete;
+package com.alvo.check.concreete;
 
-import com.meteogroup.check.CheckResult;
+import com.alvo.check.CheckResult;
 
 public final class LatencyCheckResult extends CheckResult {
 

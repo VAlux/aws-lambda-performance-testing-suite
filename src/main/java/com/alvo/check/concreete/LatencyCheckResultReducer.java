@@ -1,6 +1,6 @@
-package com.meteogroup.check.concreete;
+package com.alvo.check.concreete;
 
-import com.meteogroup.check.CheckResultReducer;
+import com.alvo.check.CheckResultReducer;
 
 import java.util.function.BinaryOperator;
 

@@ -1,4 +1,4 @@
-package com.meteogroup.http;
+package com.alvo.http;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;

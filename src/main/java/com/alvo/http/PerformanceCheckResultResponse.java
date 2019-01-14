@@ -1,6 +1,6 @@
-package com.meteogroup.http;
+package com.alvo.http;
 
-import com.meteogroup.check.CheckResult;
+import com.alvo.check.CheckResult;
 
 import java.util.List;
 

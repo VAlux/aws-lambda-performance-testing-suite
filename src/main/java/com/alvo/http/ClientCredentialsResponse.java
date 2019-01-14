@@ -1,4 +1,4 @@
-package com.meteogroup.http;
+package com.alvo.http;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;

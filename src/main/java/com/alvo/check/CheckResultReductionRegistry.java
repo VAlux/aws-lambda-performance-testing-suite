@@ -1,7 +1,7 @@
-package com.meteogroup.check;
+package com.alvo.check;
 
-import com.meteogroup.check.concreete.LatencyCheckResult;
-import com.meteogroup.check.concreete.LatencyCheckResultReducer;
+import com.alvo.check.concreete.LatencyCheckResult;
+import com.alvo.check.concreete.LatencyCheckResultReducer;
 
 import java.util.HashMap;
 import java.util.Map;
